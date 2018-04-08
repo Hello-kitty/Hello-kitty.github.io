@@ -80,5 +80,5 @@ theme: next
 deploy:
   type: git
   repo: git@github.com:Hello-kitty/Hello-kitty.github.io.git
-  branch: gh_pages
+  branch: mater
   message: change config
