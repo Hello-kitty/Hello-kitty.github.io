@@ -3,7 +3,13 @@ title: python读写Excel
 date: 2018-05-18 15:59:22
 tags: [python,xlrd,xlwt]
 ---
+python3 使用xlrd和xlwt读取和写入Excel
+更新某个excel表格，进行两项操作，且不覆盖原有的sheet：
 
+1.  在原来的excel表中新增sheet
+2.  往原有的excel表中的某张sheet新增内容
+
+具体代码如下
 ```python
 
 import xlwt
