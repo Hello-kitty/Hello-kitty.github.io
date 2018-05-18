@@ -11,7 +11,6 @@ python3 使用xlrd和xlwt读取和写入Excel
 
 具体代码如下
 ```python
-
 import xlwt
 import xlrd
 from xlutils.copy import copy
@@ -48,5 +47,4 @@ sumsheet.write(rows,2,'{}-2'.format(rows))
 
 #保存为原有的excel表路径
 newb.save(path)
-
 ```
