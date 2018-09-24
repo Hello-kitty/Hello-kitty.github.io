@@ -14,7 +14,7 @@ Usage: grep [OPTION]... PATTERN [FILE]...
       --exclude=FILE_PATTERN  跳过文件名包含 skip files and directories matching FILE_PATTERN
       --exclude-from=FILE   跳过指定文件 skip files matching any file pattern from FILE
       --exclude-dir=PATTERN  跳过文件夹名包含 directories that match PATTERN will be skipped.
-    -v, --invert-match        反匹配，列出未匹配的 select non-matching lines
+    -v, --invert-match        反匹配,列出未匹配的 select non-matching lines
     -n, --line-number         列出匹配的的内容的行号 print line number with output lines
     -l, --files-with-matches  列出匹配到内容的文件名称 print only names of FILEs containing matches
 
