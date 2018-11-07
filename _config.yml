@@ -82,4 +82,4 @@ deploy:
   type: git
   repo: git@github.com:Hello-kitty/Hello-kitty.github.io.git
   branch: master
-  message: 添加npm常用包和linux常用命令
+  message: 添加xpath和dev/null 2>&1
