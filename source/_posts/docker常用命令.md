@@ -1,6 +1,16 @@
 ---
 title: docker常用命令
 date: 2021-01-15 19:35:31
+author: green
+img: 
+top: true
+cover: true
+coverImg: 
+password: 
+toc: false
+mathjax: false
+summary: 
+categories: Develop Tools
 tags: [docker]
 ---
 
@@ -26,7 +36,7 @@ docker run -it  -d {imageid} /bin/bash
 |选项|选项简写|说明|
 |:---|:--:|:---|
 |--interactive|-i|即使没有连接，也要保持标准输入保持打开状态，一般与-t连用|
-|--tty|-t|分配一个伪tty,一般与-i连用|
+|--tty|-t|分配一个伪tty，一般与-i连用|
 |--detach|-d|在后台运行容器，并且打印容器id|
 
 

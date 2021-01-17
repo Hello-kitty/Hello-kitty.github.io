@@ -1,6 +1,16 @@
 ---
 title: linux标准输入&输出
 date: 2018-11-07 15:23:53
+author: green
+img: 
+top: false
+cover: false
+coverImg: 
+password: 
+toc: false
+mathjax: false
+summary: 
+categories: 
 tags: [linux]
 ---
 

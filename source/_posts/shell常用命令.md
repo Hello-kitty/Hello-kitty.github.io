@@ -1,6 +1,16 @@
 ---
 title: shell常用命令
 date: 2018-11-21 09:21:15
+author: green
+img: 
+top: false
+cover: false
+coverImg: 
+password: 
+toc: false
+mathjax: false
+summary: 
+categories: 
 tags: [linux,shell]
 ---
 

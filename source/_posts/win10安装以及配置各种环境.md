@@ -1,6 +1,16 @@
 ---
 title: win10安装以及配置各种环境
 date: 2018-06-10 11:58:11
+author: green
+img: 
+top: false
+cover: false
+coverImg: 
+password: 
+toc: false
+mathjax: false
+summary: 
+categories: 
 tags: [win10,env]
 ---
 ## 使用winPE+EasyBCD引导启动，安装系统

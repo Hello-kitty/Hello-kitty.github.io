@@ -1,6 +1,16 @@
 ---
 title: python读写Excel
 date: 2018-05-18 15:59:22
+author: green
+img: 
+top: false
+cover: false
+coverImg: 
+password: 
+toc: false
+mathjax: false
+summary: 
+categories: 
 tags: [python,xlrd,xlwt]
 ---
 python3 使用xlrd和xlwt读取和写入Excel

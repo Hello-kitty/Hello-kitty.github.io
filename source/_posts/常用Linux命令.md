@@ -1,6 +1,16 @@
 ---
 title: 常用Linux命令
 date: 2018-09-10 10:27:11
+author: green
+img: 
+top: true
+cover: false
+coverImg: 
+password: 
+toc: false
+mathjax: false
+summary: 
+categories: 
 tags: [linux]
 ---
 

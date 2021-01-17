@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 9527's Hexo Blog
-subtitle:
-description:
-keywords:
+title: 9527's Blog
+subtitle: 9527 就是你的终身代号！ 开始做事
+description: 9527的技术blog
+keywords: 9527
 author: 9527
 language: zh-CN
-timezone: Asia/Shanghai
+timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://example.com
+url: https://hello-kitty.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -128,4 +128,4 @@ deploy:
   type: git
   repo: git@github.com:Hello-kitty/Hello-kitty.github.io.git
   branch: master
-  message: update
+  message: 重新配置，修改图片
