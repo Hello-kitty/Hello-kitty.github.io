@@ -4,7 +4,7 @@ date: 2018-09-10 09:32:32
 author: green
 img: 
 top: false
-cover: true
+cover: false
 coverImg: 
 password: 
 toc: false
