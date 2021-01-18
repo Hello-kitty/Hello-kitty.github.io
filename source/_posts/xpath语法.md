@@ -2,10 +2,10 @@
 title: xpath语法
 date: 2018-09-11 18:20:03
 author: green
-img: 
+img: https://i.loli.net/2021/01/18/dvMQgIuorpzSAY4.png
 top: false
 cover: true
-coverImg: 
+coverImg: https://i.loli.net/2021/01/18/ZCXa6iof4YdGlhD.jpg
 password: 
 toc: false
 mathjax: false

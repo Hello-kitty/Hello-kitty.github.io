@@ -2,10 +2,10 @@
 title: docker常用命令
 date: 2021-01-15 19:35:31
 author: green
-img: 
+img: https://i.loli.net/2021/01/17/LthCmfp5gdPTHWZ.png
 top: true
 cover: true
-coverImg: 
+coverImg: https://i.loli.net/2021/01/17/iwT6DGXvBIFuOaq.png
 password: 
 toc: false
 mathjax: false
@@ -31,7 +31,7 @@ Options:
 
 - 启动容器
 ```bash
-docker run -it  -d {imageid} /bin/bash
+docker run -it  -d [imageid] /bin/bash
 ```
 |选项|选项简写|说明|
 |:---|:--:|:---|
@@ -42,7 +42,7 @@ docker run -it  -d {imageid} /bin/bash
 
 - 启动已停止容器
 ```bash
-docker start {containerid}
+docker start [containerid]
 ```
 
 - 关闭所有正在运行的容器
@@ -52,7 +52,7 @@ docker kill $(docker ps -q)
 
 - 进入一个容器
 ```bash
-docker exec -it {containerid} /bin/bash
+docker exec -it [containerid] /bin/bash
 或者
-docker exec -it {containerid} sh
+docker exec -it [containerid] sh
 ```

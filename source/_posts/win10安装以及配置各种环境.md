@@ -2,7 +2,7 @@
 title: win10安装以及配置各种环境
 date: 2018-06-10 11:58:11
 author: green
-img: 
+img: https://i.loli.net/2021/01/18/sn4oaB8EK6jOkID.jpg
 top: false
 cover: false
 coverImg: 

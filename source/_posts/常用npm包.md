@@ -2,7 +2,7 @@
 title: 常用npm包
 date: 2018-09-10 09:32:32
 author: green
-img: 
+img: https://i.loli.net/2021/01/18/WEknwdG1eRolrIj.png
 top: false
 cover: false
 coverImg: 
