@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="常用Linux命令, 9527">
+    <meta name="keywords" content="python函数的参数, 9527">
     <meta name="description" content="9527的技术blog">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>常用Linux命令 | 9527&#39;s Blog</title>
+    <title>python函数的参数 | 9527&#39;s Blog</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/01/17/NPIjh7WQMn3Z6cY.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/01/29/eSwRCgsLmQfdznH.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">常用Linux命令</h1>
+                    <h1 class="description center-align post-title">python函数的参数</h1>
                 </div>
             </div>
         </div>
@@ -303,10 +303,104 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -315,8 +409,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/linux/">
-                                <span class="chip bg-color">linux</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -331,7 +425,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-09-10
+                    2021-01-29
                 </div>
                 
 
@@ -340,14 +434,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    813
+                    348
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -367,63 +461,62 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><pre class=" language-bash"><code class="language-bash">Usage: <span class="token function">grep</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. PATTERN <span class="token punctuation">[</span>FILE<span class="token punctuation">]</span><span class="token punctuation">..</span>.
+                <h2 id="python-参数"><a href="#python-参数" class="headerlink" title="python 参数"></a>python 参数</h2><h3 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h3><p>可变参数 (Variable Argument) 的方法：使用<em>args和**kwargs语法。其中，</em>args是可变的positional arguments列表，*<em>kwargs是可变的keyword arguments列表。并且，</em>args必须位于**kwargs之前，因为positional arguments必须位于keyword arguments之前。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">test_args</span><span class="token punctuation">(</span>first<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Required argument is:'</span><span class="token punctuation">,</span>first<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> args<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Optional argument (*args) is:'</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> j<span class="token punctuation">,</span>k <span class="token keyword">in</span> kwargs<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Optional argument %s (**kwargs) is: %s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>j<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-    -R, -r, --recursive       递归 equivalent to --directories<span class="token operator">=</span>recurse
-      --include<span class="token operator">=</span>FILE_PATTERN  匹配文件名包含 search only files that match FILE_PATTERN
-      <span class="token comment" spellcheck="true">#只在目录中所有的.php和.html文件中递归搜索字符 grep -r "xxx" ./ --include *.&amp;#123;php,html&amp;#125; </span>
-      --exclude<span class="token operator">=</span>FILE_PATTERN  跳过文件名包含 skip files and directories matching FILE_PATTERN
-      --exclude-from<span class="token operator">=</span>FILE   跳过指定文件 skip files matching any <span class="token function">file</span> pattern from FILE
-      --exclude-dir<span class="token operator">=</span>PATTERN  跳过文件夹名包含 directories that match PATTERN will be skipped.
-    -v, --invert-match        反匹配,列出未匹配的 <span class="token keyword">select</span> non-matching lines
-    -n, --line-number         列出匹配的的内容的行号 print line number with output lines
-    -l, --files-with-matches  列出匹配到内容的文件名称 print only names of FILEs containing matches
-</code></pre>
-<h2 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h2><pre class=" language-bash"><code class="language-bash">usage: <span class="token function">netstat</span> <span class="token punctuation">[</span>-vWeenNcCF<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>Af<span class="token operator">></span><span class="token punctuation">]</span> -r         <span class="token function">netstat</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;-V|--version|-h|--help&amp;#125;</span>
-       <span class="token function">netstat</span> <span class="token punctuation">[</span>-vWnNcaeol<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>Socket<span class="token operator">></span> <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
-       <span class="token function">netstat</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; [-vWeenNac] -I[&lt;Iface>] | [-veenNac] -i | [-cnNe] -M | -s [-6tuw] &amp;#125; [delay]</span>
+test_args<span class="token punctuation">(</span><span class="token number">99</span><span class="token punctuation">)</span>
+test_args<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> k1<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">)</span>
+test_args<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span>k1<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">,</span>k2<span class="token operator">=</span><span class="token number">7</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># output:</span>
+<span class="token comment" spellcheck="true"># Required argument is: 99</span>
+<span class="token comment" spellcheck="true"># Required argument is: a</span>
+<span class="token comment" spellcheck="true"># Optional argument k1 (**kwargs) is: 9</span>
+<span class="token comment" spellcheck="true"># Required argument is: 1</span>
+<span class="token comment" spellcheck="true"># Optional argument (*args) is: 5</span>
+<span class="token comment" spellcheck="true"># Optional argument (*args) is: 6</span>
+<span class="token comment" spellcheck="true"># Optional argument (*args) is: a</span>
+<span class="token comment" spellcheck="true"># Optional argument (*args) is: b</span>
+<span class="token comment" spellcheck="true"># Optional argument k1 (**kwargs) is: 6</span>
+<span class="token comment" spellcheck="true"># Optional argument k2 (**kwargs) is: 7</span></code></pre>
+<p><em>args和**kwargs语法不仅可以在函数定义中使用，同样可以在函数调用的时候使用。不同的是，如果说在函数定义的位置使用</em>args和**kwargs是一个将参数pack的过程，那么在函数调用的时候就是一个将参数unpack的过程了。下面使用一个例子来加深理解：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">test_args</span><span class="token punctuation">(</span>first<span class="token punctuation">,</span> second<span class="token punctuation">,</span> third<span class="token punctuation">,</span> fourth<span class="token punctuation">,</span> fifth<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'First argument: '</span><span class="token punctuation">,</span> first<span class="token punctuation">)</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Second argument: '</span><span class="token punctuation">,</span> second<span class="token punctuation">)</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Third argument: '</span><span class="token punctuation">,</span> third<span class="token punctuation">)</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Fourth argument: '</span><span class="token punctuation">,</span> fourth<span class="token punctuation">)</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Fifth argument: '</span><span class="token punctuation">,</span> fifth<span class="token punctuation">)</span>
 
-<span class="token function">netstat</span> -anp
-    -n, --numeric            don't resolve names
-    -p, --programs           display PID/Program name <span class="token keyword">for</span> sockets
-    -a, --all                display all sockets <span class="token punctuation">(</span>default: connected<span class="token punctuation">)</span>
-</code></pre>
-<h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">ps</span> -ef 
-</code></pre>
-<h2 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">cat</span>  access_log <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">"14/Dec/2015:19:47"</span> <span class="token operator">|</span> <span class="token function">awk</span> -F <span class="token string">" "</span> <span class="token string">'&amp;#123;if(<span class="token variable">$15</span>>0.00001) print <span class="token variable">$15</span>&amp;#125;'</span>  <span class="token operator">|</span> <span class="token function">wc</span> -l
-<span class="token function">cat</span> access.log <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">"08/Nov/2018:16"</span> <span class="token operator">|</span> <span class="token function">awk</span> -F <span class="token string">" "</span> <span class="token string">'&amp;#123;if (<span class="token variable">$25</span>>0.538) print <span class="token variable">$25</span>&amp;#125;'</span> <span class="token operator">|</span> <span class="token function">wc</span> -l
+<span class="token comment" spellcheck="true"># Use *args</span>
+args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+test_args<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># results:</span>
+<span class="token comment" spellcheck="true"># First argument:  1</span>
+<span class="token comment" spellcheck="true"># Second argument:  2</span>
+<span class="token comment" spellcheck="true"># Third argument:  3</span>
+<span class="token comment" spellcheck="true"># Fourth argument:  4</span>
+<span class="token comment" spellcheck="true"># Fifth argument:  5</span>
 
-<span class="token function">ps</span> -ef <span class="token operator">|</span> <span class="token function">grep</span> zookeeper <span class="token operator">|</span> <span class="token function">grep</span> -v <span class="token function">grep</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&amp;#123;print <span class="token variable">$2</span>&amp;#125;'</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">kill</span> -9
+<span class="token comment" spellcheck="true"># Use **kwargs</span>
+kwargs <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    <span class="token string">'first'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">'second'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token string">'third'</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token string">'fourth'</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token string">'fifth'</span><span class="token punctuation">:</span> <span class="token number">5</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 
-test.txt
-
-Marry 2143 78 84 77
-Jack 2321 66 78 45
-Tom 2122 48 77 71
-Mike 2537 87 97 95
-Bob 2415 40 57 62
-
-<span class="token function">awk</span> <span class="token string">'BEGIN&amp;#123;math=0;eng=0;com=0;printf "Lineno.   Name    No.    Math   English   Computer    Total\n";printf "------------------------------------------------------------\n"&amp;#125;&amp;#123;math+=<span class="token variable">$3</span>; eng+=<span class="token variable">$4</span>; com+=<span class="token variable">$5</span>;printf "%-8s %-7s %-7s %-7s %-9s %-10s %-7s \n",NR,<span class="token variable">$1</span>,<span class="token variable">$2</span>,<span class="token variable">$3</span>,<span class="token variable">$4</span>,<span class="token variable">$5</span>,<span class="token variable">$3</span>+<span class="token variable">$4</span>+<span class="token variable">$5</span>&amp;#125; END&amp;#123;printf "------------------------------------------------------------\n";printf "%-24s %-7s %-9s %-20s \n","Total:",math,eng,com;printf "%-24s %-7s %-9s %-20s \n","Avg:",math/NR,eng/NR,com/NR&amp;#125;'</span> test.txt
-</code></pre>
-<p><img src="https://i.loli.net/2021/01/17/8kS9IMEDQWlqLnH.jpg" alt="输出结果"></p>
-<h2 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">sed</span> <span class="token punctuation">[</span>-nefr<span class="token punctuation">]</span> <span class="token punctuation">[</span>动作<span class="token punctuation">]</span>
-选项与参数：
--n ：使用安静<span class="token punctuation">(</span>silent<span class="token punctuation">)</span>模式。在一般 <span class="token function">sed</span> 的用法中，所有来自 STDIN 的数据一般都会被列出到终端上。但如果加上 -n 参数后，则只有经过sed 特殊处理的那一行<span class="token punctuation">(</span>或者动作<span class="token punctuation">)</span>才会被列出来。
--e ：直接在命令列模式上进行 <span class="token function">sed</span> 的动作编辑；
--f ：直接将 <span class="token function">sed</span> 的动作写在一个文件内， -f filename 则可以运行 filename 内的 <span class="token function">sed</span> 动作；
--r ：sed 的动作支持的是延伸型正规表示法的语法。<span class="token punctuation">(</span>默认是基础正规表示法语法<span class="token punctuation">)</span>
--i ：直接修改读取的文件内容，而不是输出到终端。
-
-动作说明： <span class="token punctuation">[</span>n1<span class="token punctuation">[</span>,n2<span class="token punctuation">]</span><span class="token punctuation">]</span>function
-n1, n2 ：不见得会存在，一般代表『选择进行动作的行数』，举例来说，如果我的动作是需要在 10 到 20 行之间进行的，则『 10,20<span class="token punctuation">[</span>动作行为<span class="token punctuation">]</span> 』
-
-function：
-a ：新增， a 的后面可以接字串，而这些字串会在新的一行出现<span class="token punctuation">(</span>目前的下一行<span class="token punctuation">)</span>～
-c ：取代， c 的后面可以接字串，这些字串可以取代 n1,n2 之间的行！
-d ：删除，因为是删除啊，所以 d 后面通常不接任何咚咚；
-i ：插入， i 的后面可以接字串，而这些字串会在新的一行出现<span class="token punctuation">(</span>目前的上一行<span class="token punctuation">)</span>；
-p ：列印，亦即将某个选择的数据印出。通常 p 会与参数 <span class="token function">sed</span> -n 一起运行～
-s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可以搭配正规表示法！例如 1,20s/old/new/g 就是啦！</code></pre>
+test_args<span class="token punctuation">(</span><span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># results:</span>
+<span class="token comment" spellcheck="true"># First argument:  1</span>
+<span class="token comment" spellcheck="true"># Second argument:  2</span>
+<span class="token comment" spellcheck="true"># Third argument:  3</span>
+<span class="token comment" spellcheck="true"># Fourth argument:  4</span>
+<span class="token comment" spellcheck="true"># Fifth argument:  5</span></code></pre>
 
                 
             </div>
@@ -450,7 +543,7 @@ s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hello-kitty.github.io/2018/09/10/chang-yong-linux-ming-ling/">https://hello-kitty.github.io/2018/09/10/chang-yong-linux-ming-ling/</a>
+                    <a href="https://hello-kitty.github.io/2021/01/29/python-de-can-shu/">https://hello-kitty.github.io/2021/01/29/python-de-can-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -488,8 +581,8 @@ s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -661,16 +754,17 @@ s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2018/09/11/xpath-yu-fa/">
+                <a href="/2021/01/29/python-de-can-shu/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/01/18/dvMQgIuorpzSAY4.png" class="responsive-img" alt="xpath语法">
+                        <img src="https://i.loli.net/2021/01/29/eSwRCgsLmQfdznH.png" class="responsive-img" alt="python函数的参数">
                         
-                        <span class="card-title">xpath语法</span>
+                        <span class="card-title">python函数的参数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -680,9 +774,9 @@ s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2018-09-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -691,11 +785,12 @@ s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/xpath/">
-                        <span class="chip bg-color">xpath</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -709,12 +804,12 @@ s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/09/10/chang-yong-npm-bao/">
+                <a href="/2021/01/15/docker-chang-yong-ming-ling/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/01/18/WEknwdG1eRolrIj.png" class="responsive-img" alt="常用npm包">
+                        <img src="https://i.loli.net/2021/01/17/LthCmfp5gdPTHWZ.png" class="responsive-img" alt="docker常用命令">
                         
-                        <span class="card-title">常用npm包</span>
+                        <span class="card-title">docker常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -725,12 +820,16 @@ s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-15
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            green
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Develop-Tools/" class="post-category">
+                                    Develop Tools
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -738,8 +837,8 @@ s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/npm/">
-                        <span class="chip bg-color">npm</span>
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
                     </a>
                     
                 </div>
@@ -771,6 +870,100 @@ s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
