@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python读写Excel, 9527">
+    <meta name="keywords" content="git常用命令-1, 9527">
     <meta name="description" content="9527的技术blog">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>python读写Excel | 9527&#39;s Blog</title>
+    <title>git常用命令-1 | 9527&#39;s Blog</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/01/18/aIEnH4jKmrDStoU.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">python读写Excel</h1>
+                    <h1 class="description center-align post-title">git常用命令-1</h1>
                 </div>
             </div>
         </div>
@@ -303,10 +303,104 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -315,16 +409,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
                             </a>
                         
-                            <a href="/tags/xlrd/">
-                                <span class="chip bg-color">xlrd</span>
-                            </a>
-                        
-                            <a href="/tags/xlwt/">
-                                <span class="chip bg-color">xlwt</span>
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
                     </div>
@@ -339,7 +429,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-05-18
+                    2021-03-10
                 </div>
                 
 
@@ -348,7 +438,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    245
+                    323
                 </div>
                 
 
@@ -378,48 +468,68 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>python3 使用xlrd和xlwt读取和写入Excel<br>更新某个excel表格，进行两项操作，且不覆盖原有的sheet：</p>
-<ol>
-<li>在原来的excel表中新增sheet</li>
-<li>往原有的excel表中的某张sheet新增内容</li>
-</ol>
-<p>具体代码如下</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> xlwt
-<span class="token keyword">import</span> xlrd
-<span class="token keyword">from</span> xlutils<span class="token punctuation">.</span>copy <span class="token keyword">import</span> copy
+                <h2 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 初始化仓库</span>
+$ <span class="token function">git</span> init
 
-path <span class="token operator">=</span> <span class="token string">'demo.xls'</span>
+<span class="token comment"># 查看当前Git配置</span>
+$ <span class="token function">git</span> config --list
 
-<span class="token comment">#打开需要操作的excel表</span>
-wb<span class="token operator">=</span>xlrd<span class="token punctuation">.</span>open_workbook<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># 配置用户信息</span>
+$ <span class="token function">git</span> config --global user.name <span class="token string">"[name]"</span>
+$ <span class="token function">git</span> config --global user.email <span class="token string">"[email]"</span>
 
-<span class="token comment">#复制原有表</span>
-newb<span class="token operator">=</span>copy<span class="token punctuation">(</span>wb<span class="token punctuation">)</span>
+<span class="token comment"># 修改默认编辑器为vscode</span>
+$ <span class="token function">git</span> config --global core.editor <span class="token string">"code --wait"</span>
 
-<span class="token comment">#新增sheet,参数是该sheet的名字，可自定义</span>
-wbsheet<span class="token operator">=</span>newb<span class="token punctuation">.</span>add_sheet<span class="token punctuation">(</span><span class="token string">'sheet_nameZzz'</span><span class="token punctuation">)</span>
+<span class="token comment"># 修改默认diff工具为vscode</span>
+<span class="token comment"># 命令行不成功需要手动去编辑 另外需要在vscode中执行code install</span>
+$ <span class="token function">git</span> config --global difftool.vscode.cmd <span class="token string">"code --wait --diff <span class="token variable">$LOCAL</span> <span class="token variable">$REMOTE</span>"</span>
 
-<span class="token comment">#向新sheet中写入数据。本代码中的d是某个dataframe</span>
-wbsheet<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token string">'A'</span><span class="token punctuation">)</span>
-wbsheet<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'B'</span><span class="token punctuation">)</span>
-wbsheet<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'C'</span><span class="token punctuation">)</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        wbsheet<span class="token punctuation">.</span>write<span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>j<span class="token punctuation">,</span><span class="token string">'&#123;&#125;-&#123;&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># 添加远程仓库</span>
+$ <span class="token function">git</span> remote <span class="token function">add</span> <span class="token punctuation">[</span>shortname<span class="token punctuation">]</span> <span class="token punctuation">[</span>url<span class="token punctuation">]</span>
 
-<span class="token comment"># 获取原有excel表中sheet名为‘summary’的sheet</span>
-sumsheet<span class="token operator">=</span>newb<span class="token punctuation">.</span>get_sheet<span class="token punctuation">(</span><span class="token string">'Sheet1'</span><span class="token punctuation">)</span>
+<span class="token comment"># 添加本地文件快照到本地暂存区</span>
+$ <span class="token function">git</span> <span class="token function">add</span> <span class="token punctuation">[</span>filename1<span class="token punctuation">]</span> <span class="token punctuation">[</span>filename2<span class="token punctuation">]</span>
+$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
 
-<span class="token comment">#k表示该sheet的最后一行</span>
-rows<span class="token operator">=</span><span class="token builtin">len</span><span class="token punctuation">(</span>sumsheet<span class="token punctuation">.</span>rows<span class="token punctuation">)</span>
+<span class="token comment"># 提交暂存区文件到本地仓库</span>
+$ <span class="token function">git</span> commit -m <span class="token punctuation">[</span>message<span class="token punctuation">]</span>
+$ <span class="token function">git</span> commit
 
-<span class="token comment">#想原有sheet后面新增数据</span>
-sumsheet<span class="token punctuation">.</span>write<span class="token punctuation">(</span>rows<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token string">'&#123;&#125;-0'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>rows<span class="token punctuation">)</span><span class="token punctuation">)</span>
-sumsheet<span class="token punctuation">.</span>write<span class="token punctuation">(</span>rows<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'&#123;&#125;-1'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>rows<span class="token punctuation">)</span><span class="token punctuation">)</span>
-sumsheet<span class="token punctuation">.</span>write<span class="token punctuation">(</span>rows<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'&#123;&#125;-2'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>rows<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># 显示工作区相对暂存区有变更的文件</span>
+$ <span class="token function">git</span> status 
+$ <span class="token function">git</span> status -s
 
-<span class="token comment">#保存为原有的excel表路径</span>
-newb<span class="token punctuation">.</span>save<span class="token punctuation">(</span>path<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># 查看暂存区的文件</span>
+$ <span class="token function">git</span> ls-files
+
+<span class="token comment"># 查看工作区相对暂存区的变动</span>
+$ <span class="token function">git</span> <span class="token function">diff</span>
+
+<span class="token comment"># 查看暂存区相对上一次提交的变动</span>
+$ <span class="token function">git</span> <span class="token function">diff</span> --cached
+
+<span class="token comment"># 从工作区和暂存区同时删除文件</span>
+$ <span class="token function">git</span> <span class="token function">rm</span> <span class="token punctuation">[</span>filename<span class="token punctuation">]</span>
+
+<span class="token comment"># 从暂存区中删除文件 保留工作区的文件</span>
+$ <span class="token function">git</span> <span class="token function">rm</span> --cache <span class="token punctuation">[</span>filename<span class="token punctuation">]</span>
+
+<span class="token comment"># 查看版本历史记录</span>
+$ <span class="token function">git</span> log
+$ <span class="token function">git</span> log --oneline
+
+<span class="token comment"># 从暂存区删除提交的快照</span>
+$ <span class="token function">git</span> restore --staged <span class="token punctuation">[</span>filename<span class="token punctuation">]</span>
+
+<span class="token comment"># 列出树对象的内容</span>
+$ <span class="token function">git</span> ls-tree <span class="token punctuation">[</span>tree object<span class="token punctuation">]</span>
+
+<span class="token comment"># 显示某次提交的数据变化</span>
+$ <span class="token function">git</span> show <span class="token punctuation">[</span>commit<span class="token punctuation">]</span>
+
+<span class="token comment"># 显示树对象中某个文件的内容</span>
+$ <span class="token function">git</span> show <span class="token punctuation">[</span>tree object<span class="token punctuation">]</span>:<span class="token punctuation">[</span>filename<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -445,7 +555,7 @@ newb<span class="token punctuation">.</span>save<span class="token punctuation">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hello-kitty.github.io/2018/05/18/python-du-xie-excel/">https://hello-kitty.github.io/2018/05/18/python-du-xie-excel/</a>
+                    <a href="https://hello-kitty.github.io/2021/03/10/git-chang-yong-ming-ling-1/">https://hello-kitty.github.io/2021/03/10/git-chang-yong-ming-ling-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -483,16 +593,12 @@ newb<span class="token punctuation">.</span>save<span class="token punctuation">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
                                 </a>
                             
-                                <a href="/tags/xlrd/">
-                                    <span class="chip bg-color">xlrd</span>
-                                </a>
-                            
-                                <a href="/tags/xlwt/">
-                                    <span class="chip bg-color">xlwt</span>
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                         </div>
@@ -668,12 +774,13 @@ newb<span class="token punctuation">.</span>save<span class="token punctuation">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2018/06/10/win10-an-zhuang-yi-ji-pei-zhi-ge-chong-huan-jing/">
+                <a href="/2021/03/27/git-chang-yong-ming-ling-2/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/01/18/sn4oaB8EK6jOkID.jpg" class="responsive-img" alt="win10安装以及配置各种环境">
                         
-                        <span class="card-title">win10安装以及配置各种环境</span>
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="git常用命令-2">
+                        
+                        <span class="card-title">git常用命令-2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -684,7 +791,7 @@ newb<span class="token punctuation">.</span>save<span class="token punctuation">
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2018-06-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-27
                         </span>
                         <span class="publish-author">
                             
@@ -697,12 +804,12 @@ newb<span class="token punctuation">.</span>save<span class="token punctuation">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/win10/">
-                        <span class="chip bg-color">win10</span>
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
-                    <a href="/tags/env/">
-                        <span class="chip bg-color">env</span>
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
                 </div>
@@ -716,12 +823,12 @@ newb<span class="token punctuation">.</span>save<span class="token punctuation">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2017/10/24/hello-world/">
+                <a href="/2021/01/29/python-can-shu/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/01/18/dj3wNqVc1Ksimzf.png" class="responsive-img" alt="Hello World">
+                        <img src="https://i.loli.net/2021/01/29/eSwRCgsLmQfdznH.png" class="responsive-img" alt="python参数">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">python参数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -732,7 +839,7 @@ newb<span class="token punctuation">.</span>save<span class="token punctuation">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2017-10-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-29
                             </span>
                         <span class="publish-author">
                             
@@ -745,8 +852,8 @@ newb<span class="token punctuation">.</span>save<span class="token punctuation">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hello-World/">
-                        <span class="chip bg-color">Hello World</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -778,6 +885,100 @@ newb<span class="token punctuation">.</span>save<span class="token punctuation">
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 

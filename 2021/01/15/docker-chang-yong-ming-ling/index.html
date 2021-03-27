@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 
@@ -371,23 +371,21 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h2><ul>
-<li><p>显示所有镜像</p>
-<pre class=" language-bash"><code class="language-bash">docker images</code></pre>
-</li>
-<li><p>显示所有容器</p>
-<pre class=" language-bash"><code class="language-bash">docker <span class="token function">ps</span>
+<li>显示所有镜像<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker images<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>显示所有容器<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">ps</span>
 Options:
--a, --all             Show all containers <span class="token punctuation">(</span>default shows just running<span class="token punctuation">)</span>
--q, --quiet           Only display container IDs</code></pre>
-</li>
-<li><p>启动容器</p>
-<pre class=" language-bash"><code class="language-bash">docker run -it  -d <span class="token punctuation">[</span>imageid<span class="token punctuation">]</span> /bin/bash</code></pre>
+  -a, --all             Show all containers <span class="token punctuation">(</span>default shows just running<span class="token punctuation">)</span>
+  -q, --quiet           Only display container IDs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>启动容器<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it  -d <span class="token punctuation">[</span>imageid<span class="token punctuation">]</span> /bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <table>
 <thead>
 <tr>
@@ -415,17 +413,11 @@ Options:
 </li>
 </ul>
 <ul>
-<li><p>启动已停止容器</p>
-<pre class=" language-bash"><code class="language-bash">docker start <span class="token punctuation">[</span>containerid<span class="token punctuation">]</span></code></pre>
-</li>
-<li><p>关闭所有正在运行的容器</p>
-<pre class=" language-bash"><code class="language-bash">docker <span class="token function">kill</span> <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -q<span class="token variable">)</span></span></code></pre>
-</li>
-<li><p>进入一个容器</p>
-<pre class=" language-bash"><code class="language-bash">docker <span class="token function">exec</span> -it <span class="token punctuation">[</span>containerid<span class="token punctuation">]</span> /bin/bash
+<li>启动已停止容器<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker start <span class="token punctuation">[</span>containerid<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>关闭所有正在运行的容器<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token function">kill</span> <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -q<span class="token variable">)</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>进入一个容器<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker <span class="token builtin class-name">exec</span> -it <span class="token punctuation">[</span>containerid<span class="token punctuation">]</span> /bin/bash
 或者
-docker <span class="token function">exec</span> -it <span class="token punctuation">[</span>containerid<span class="token punctuation">]</span> sh</code></pre>
-</li>
+docker <span class="token builtin class-name">exec</span> -it <span class="token punctuation">[</span>containerid<span class="token punctuation">]</span> <span class="token function">sh</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 
                 
@@ -668,12 +660,12 @@ docker <span class="token function">exec</span> -it <span class="token punctuati
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/01/29/python-de-can-shu/">
+                <a href="/2021/01/29/python-can-shu/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2021/01/29/eSwRCgsLmQfdznH.png" class="responsive-img" alt="python函数的参数">
+                        <img src="https://i.loli.net/2021/01/29/eSwRCgsLmQfdznH.png" class="responsive-img" alt="python参数">
                         
-                        <span class="card-title">python函数的参数</span>
+                        <span class="card-title">python参数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -855,7 +847,7 @@ docker <span class="token function">exec</span> -it <span class="token punctuati
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.3k</span>&nbsp;字
+                class="white-color">2.6k</span>&nbsp;字
             
             
             

@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 
@@ -340,7 +340,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    293
                 </div>
                 
 
@@ -362,22 +362,24 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="Linux标准输入输出"><a href="#Linux标准输入输出" class="headerlink" title="Linux标准输入输出"></a>Linux标准输入输出</h2><ul>
-<li>标准输入0    从键盘获得输入 /proc/self/fd/0 </li>
-<li>标准输出1    输出到屏幕（即控制台） /proc/self/fd/1 </li>
-<li>错误输出2    输出到屏幕（即控制台） /proc/self/fd/2 </li>
+<li>标准输入0    从键盘获得输入 /proc/self/fd/0</li>
+<li>标准输出1    输出到屏幕（即控制台） /proc/self/fd/1</li>
+<li>错误输出2    输出到屏幕（即控制台） /proc/self/fd/2</li>
 </ul>
-<pre><code>/dev/null代表linux的空设备文件，所有往这个文件里面写入的内容都会丢失，俗称“黑洞” 
-- 2&gt;/dev/null意思就是把错误输出到“黑洞” 
-- &gt;/dev/null 2&gt;&amp;1默认情况是1，也就是等同于1&gt;/dev/null 2&gt;&amp;1。意思就是把标准输出重定向到“黑洞”，还把错误输出2重定向到标准输出1，也就是标准输出和错误输出都进了“黑洞” 
-- 2&gt;&amp;1 &gt;/dev/null意思就是把错误输出2重定向到标准出书1，也就是屏幕，标准输出进了“黑洞”，也就是标准输出进了黑洞，错误输出打印到屏幕 
-关于这里”&amp;”的作用，我们可以这么理解2&gt;/dev/null重定向到文件，那么2&gt;&amp;1，这里如果去掉了&amp;就是把错误输出给了文件1了，用了&amp;是表明1是标准输出。</code></pre>
-
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/dev/null代表linux的空设备文件，所有往这个文件里面写入的内容都会丢失，俗称“黑洞” 
+- <span class="token operator"><span class="token file-descriptor important">2</span>></span>/dev/null意思就是把错误输出到“黑洞” 
+- <span class="token operator">></span>/dev/null <span class="token operator"><span class="token file-descriptor important">2</span>></span><span class="token file-descriptor important">&amp;1</span>默认情况是1，也就是等同于<span class="token operator"><span class="token file-descriptor important">1</span>></span>/dev/null <span class="token operator"><span class="token file-descriptor important">2</span>></span><span class="token file-descriptor important">&amp;1</span>。意思就是把标准输出重定向到“黑洞”，还把错误输出2重定向到标准输出1，也就是标准输出和错误输出都进了“黑洞” 
+- <span class="token operator"><span class="token file-descriptor important">2</span>></span><span class="token file-descriptor important">&amp;1</span> <span class="token operator">></span>/dev/null意思就是把错误输出2重定向到标准出书1，也就是屏幕，标准输出进了“黑洞”，也就是标准输出进了黑洞，错误输出打印到屏幕 
+关于这里”<span class="token operator">&amp;</span>”的作用，我们可以这么理解<span class="token operator"><span class="token file-descriptor important">2</span>></span>/dev/null重定向到文件，那么<span class="token operator"><span class="token file-descriptor important">2</span>></span><span class="token file-descriptor important">&amp;1</span>，这里如果去掉了<span class="token operator">&amp;</span>就是把错误输出给了文件1了，用了<span class="token operator">&amp;</span>是表明1是标准输出。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -805,7 +807,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.3k</span>&nbsp;字
+                class="white-color">2.6k</span>&nbsp;字
             
             
             
