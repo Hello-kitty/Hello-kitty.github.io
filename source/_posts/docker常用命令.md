@@ -22,7 +22,7 @@ docker images
 ```
 
 - 显示所有容器
-```bash
+```bash 
 docker ps
 Options:
   -a, --all             Show all containers (default shows just running)
@@ -51,7 +51,7 @@ docker kill $(docker ps -q)
 ```
 
 - 进入一个容器
-```bash
+```bash 
 docker exec -it [containerid] /bin/bash
 或者
 docker exec -it [containerid] sh

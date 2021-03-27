@@ -15,6 +15,7 @@ tags: [linux]
 ---
 
 ## grep
+
 ```bash
 Usage: grep [OPTION]... PATTERN [FILE]...
 
@@ -31,6 +32,7 @@ Usage: grep [OPTION]... PATTERN [FILE]...
 ```
 
 ## netstat
+
 ```bash
 usage: netstat [-vWeenNcCF] [<Af>] -r         netstat {-V|--version|-h|--help}
        netstat [-vWnNcaeol] [<Socket> ...]
@@ -44,6 +46,7 @@ netstat -anp
 ```
 
 ## ps
+
 ```bash
 ps -ef 
 
@@ -68,9 +71,11 @@ Bob 2415 40 57 62
 awk 'BEGIN{math=0;eng=0;com=0;printf "Lineno.   Name    No.    Math   English   Computer    Total\n";printf "------------------------------------------------------------\n"}{math+=$3; eng+=$4; com+=$5;printf "%-8s %-7s %-7s %-7s %-9s %-10s %-7s \n",NR,$1,$2,$3,$4,$5,$3+$4+$5} END{printf "------------------------------------------------------------\n";printf "%-24s %-7s %-9s %-20s \n","Total:",math,eng,com;printf "%-24s %-7s %-9s %-20s \n","Avg:",math/NR,eng/NR,com/NR}' test.txt
 
 ```
+
 ![输出结果](https://i.loli.net/2021/01/17/8kS9IMEDQWlqLnH.jpg)
 
 ## sed
+
 ```bash
 sed [-nefr] [动作]
 选项与参数：

@@ -52,7 +52,7 @@ highlight:
   wrap: true
   hljs: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: true
   tab_replace: ''
@@ -62,7 +62,7 @@ prismjs:
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
   theme: 'tomorrow'
-  line_number: false    # default false
+  line_number: true    # default false
   custom_css:
 # 添加搜索
 search:
@@ -128,4 +128,4 @@ deploy:
   type: git
   repo: git@github.com:Hello-kitty/Hello-kitty.github.io.git
   branch: master
-  message: 修改推荐位
+  message: update by green

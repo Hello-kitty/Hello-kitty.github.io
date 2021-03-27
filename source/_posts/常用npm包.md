@@ -34,8 +34,8 @@ Commands:
 ```
 
 ## browser-sync
+
 ```bash
 browser-sync start --server --files "xx"
 多个文件用,分隔,例如"index.html,css/*.css"
-
 ```
