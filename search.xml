@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>macbook配置</title>
+      <link href="/2021/10/09/macbook%E9%85%8D%E7%BD%AE/"/>
+      <url>/2021/10/09/macbook%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Homebrew-安装"><a href="#Homebrew-安装" class="headerlink" title="Homebrew 安装"></a>Homebrew 安装</h2><p>官网安装一直报错，使用国内源安装，命令如下</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>sublime Text配置</title>
+      <link href="/2021/10/09/sublime%20Text%E9%85%8D%E7%BD%AE/"/>
+      <url>/2021/10/09/sublime%20Text%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h2 id="sublime-Text-配置"><a href="#sublime-Text-配置" class="headerlink" title="sublime Text 配置"></a>sublime Text 配置</h2><ul><li>基础配置</li></ul><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;font_size&quot;</span><span class="punctuation">:</span> <span class="number">15</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;tab_size&quot;</span><span class="punctuation">:</span> <span class="number">4</span><span class="punctuation">,</span> <span class="comment">//一次缩进4个空格</span></span><br><span class="line">  <span class="attr">&quot;word_wrap&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span> <span class="comment">//自动换行</span></span><br><span class="line">  <span class="attr">&quot;indent_using_spaces&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span> <span class="comment">//使用空格缩进</span></span><br><span class="line">  <span class="attr">&quot;draw_white_space&quot;</span><span class="punctuation">:</span> <span class="string">&quot;all&quot;</span><span class="punctuation">,</span> <span class="comment">//显示所有空白字符</span></span><br><span class="line">  <span class="attr">&quot;translate_tabs_to_spaces&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span> <span class="comment">//tab自动转化为空格</span></span><br><span class="line">  <span class="attr">&quot;trim_trailing_white_space_on_save&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span> <span class="comment">//保存时去除尾部多余空格</span></span><br><span class="line">  <span class="attr">&quot;expand_tabs_on_save&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span> <span class="comment">//保存时重写tab设置</span></span><br><span class="line">  <span class="attr">&quot;shift_tab_unindent&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span> <span class="comment">//使 shift+tab 等效为 command+&#123;快捷键</span></span><br><span class="line">  <span class="attr">&quot;ensure_newline_at_eof_on_save&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span> <span class="comment">//确保文件结尾有一个空行</span></span><br><span class="line">  <span class="attr">&quot;spell_check&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span> <span class="comment">//开启拼写检查</span></span><br><span class="line">  <span class="attr">&quot;line_numbers&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span> <span class="comment">//显示行号</span></span><br><span class="line">  <span class="attr">&quot;folder_exclude_patterns&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;.svn&quot;</span><span class="punctuation">,</span> <span class="string">&quot;.git&quot;</span><span class="punctuation">,</span> <span class="string">&quot;.hg&quot;</span><span class="punctuation">,</span> <span class="string">&quot;CVS&quot;</span><span class="punctuation">,</span> <span class="string">&quot;node_modules&quot;</span><span class="punctuation">]</span> <span class="comment">//忽略查找元素</span></span><br><span class="line">  <span class="comment">// &quot;ignored_packages&quot;: [&quot;Vintage&quot;],   //忽略使用的插件</span></span><br><span class="line">  <span class="comment">// &quot;color_scheme&quot;: &quot;Packages/Color Scheme - Default/Monokai.tmTheme&quot;,   //颜色风格</span></span><br><span class="line">  <span class="comment">// &quot;save_on_focus_lost&quot;: true,        //失去焦点时储存</span></span><br><span class="line">  <span class="comment">// &quot;atmic_save&quot;: true                 //自动存储</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><ul><li>配置保存文件时 tab 自动转换为空格</li></ul><ol><li>Preference -&gt; Browser Packages</li><li>新建文件夹 ExpandTabsOnSave</li><li>新建文件 ExpandTabsOnSave.py</li><li>python 文件内容如下</li></ol><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sublime, sublime_plugin, os</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ExpandTabsOnSave</span>(sublime_plugin.EventListener):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">on_pre_save</span>(<span class="params">self, view</span>):</span><br><span class="line">        <span class="keyword">if</span> view.settings().get(<span class="string">&#x27;expand_tabs_on_save&#x27;</span>) == <span class="number">1</span>:</span><br><span class="line">            view.window().run_command(<span class="string">&#x27;expand_tabs&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> sublime Text </tag>
+            
+            <tag> 编辑器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>玩转npm</title>
+      <link href="/2021/10/09/%E7%8E%A9%E8%BD%ACnpm/"/>
+      <url>/2021/10/09/%E7%8E%A9%E8%BD%ACnpm/</url>
+      
+        <content type="html"><![CDATA[<p>npm install -g npm-check-updates</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git常用命令-2</title>
+      <link href="/2021/03/27/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-2/"/>
+      <url>/2021/03/27/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-2/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git常用命令-1</title>
+      <link href="/2021/03/10/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-1/"/>
+      <url>/2021/03/10/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 初始化仓库</span></span><br><span class="line">$ git init</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前Git配置</span></span><br><span class="line">$ git config --list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置用户信息</span></span><br><span class="line">$ git config --global user.name <span class="string">&quot;[name]&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;[email]&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改默认编辑器为vscode</span></span><br><span class="line">$ git config --global core.editor <span class="string">&quot;code --wait&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改默认diff工具为vscode</span></span><br><span class="line"><span class="comment"># 命令行不成功需要手动去编辑 另外需要在vscode中执行code install</span></span><br><span class="line">$ git config --global difftool.vscode.cmd <span class="string">&quot;code --wait --diff <span class="variable">$LOCAL</span> <span class="variable">$REMOTE</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加远程仓库</span></span><br><span class="line">$ git remote add [shortname] [url]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加本地文件快照到本地暂存区</span></span><br><span class="line">$ git add [filename1] [filename2]</span><br><span class="line">$ git add .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交暂存区文件到本地仓库</span></span><br><span class="line">$ git commit -m [message]</span><br><span class="line">$ git commit</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示工作区相对暂存区有变更的文件</span></span><br><span class="line">$ git status </span><br><span class="line">$ git status -s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看暂存区的文件</span></span><br><span class="line">$ git ls-files</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看工作区相对暂存区的变动</span></span><br><span class="line">$ git diff</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看暂存区相对上一次提交的变动</span></span><br><span class="line">$ git diff --cached</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从工作区和暂存区同时删除文件</span></span><br><span class="line">$ git <span class="built_in">rm</span> [filename]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从暂存区中删除文件 保留工作区的文件</span></span><br><span class="line">$ git <span class="built_in">rm</span> --cache [filename]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看版本历史记录</span></span><br><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从暂存区删除提交的快照</span></span><br><span class="line">$ git restore --staged [filename]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出树对象的内容</span></span><br><span class="line">$ git ls-tree [tree object]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示某次提交的数据变化</span></span><br><span class="line">$ git show [commit]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示树对象中某个文件的内容</span></span><br><span class="line">$ git show [tree object]:[filename]</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python参数</title>
+      <link href="/2021/01/29/python%E5%8F%82%E6%95%B0/"/>
+      <url>/2021/01/29/python%E5%8F%82%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="python-参数"><a href="#python-参数" class="headerlink" title="python 参数"></a>python 参数</h2><h3 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h3><p>可变参数 (Variable Argument) 的方法：使用<em>args和**kwargs语法。其中，</em>args是可变的positional arguments列表，<strong>kwargs是可变的keyword arguments列表。并且，*args必须位于</strong>kwargs之前，因为positional arguments必须位于keyword arguments之前。</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">test_args</span>(<span class="params">first, *args, **kwargs</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Required argument is:&#x27;</span>,first)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> args:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;Optional argument (*args) is:&#x27;</span>, i)</span><br><span class="line">    <span class="keyword">for</span> j,k <span class="keyword">in</span> kwargs.items():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;Optional argument %s (**kwargs) is: %s&#x27;</span> % (j,k))</span><br><span class="line"></span><br><span class="line">test_args(<span class="number">99</span>)</span><br><span class="line">test_args(<span class="string">&#x27;a&#x27;</span>, k1=<span class="number">9</span>)</span><br><span class="line">test_args(<span class="number">1</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,k1=<span class="number">6</span>,k2=<span class="number">7</span>)</span><br><span class="line"><span class="comment"># output:</span></span><br><span class="line"><span class="comment"># Required argument is: 99</span></span><br><span class="line"><span class="comment"># Required argument is: a</span></span><br><span class="line"><span class="comment"># Optional argument k1 (**kwargs) is: 9</span></span><br><span class="line"><span class="comment"># Required argument is: 1</span></span><br><span class="line"><span class="comment"># Optional argument (*args) is: 5</span></span><br><span class="line"><span class="comment"># Optional argument (*args) is: 6</span></span><br><span class="line"><span class="comment"># Optional argument (*args) is: a</span></span><br><span class="line"><span class="comment"># Optional argument (*args) is: b</span></span><br><span class="line"><span class="comment"># Optional argument k1 (**kwargs) is: 6</span></span><br><span class="line"><span class="comment"># Optional argument k2 (**kwargs) is: 7</span></span><br></pre></td></tr></table></figure><p><em>args和**kwargs语法不仅可以在函数定义中使用，同样可以在函数调用的时候使用。不同的是，如果说在函数定义的位置使用</em>args和**kwargs是一个将参数pack的过程，那么在函数调用的时候就是一个将参数unpack的过程了。下面使用一个例子来加深理解：</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">test_args</span>(<span class="params">first, second, third, fourth, fifth</span>):</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&#x27;First argument: &#x27;</span>, first)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&#x27;Second argument: &#x27;</span>, second)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&#x27;Third argument: &#x27;</span>, third)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&#x27;Fourth argument: &#x27;</span>, fourth)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&#x27;Fifth argument: &#x27;</span>, fifth)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Use *args</span></span><br><span class="line">args = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">test_args(*args)</span><br><span class="line"><span class="comment"># results:</span></span><br><span class="line"><span class="comment"># First argument:  1</span></span><br><span class="line"><span class="comment"># Second argument:  2</span></span><br><span class="line"><span class="comment"># Third argument:  3</span></span><br><span class="line"><span class="comment"># Fourth argument:  4</span></span><br><span class="line"><span class="comment"># Fifth argument:  5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Use **kwargs</span></span><br><span class="line">kwargs = &#123;</span><br><span class="line">    <span class="string">&#x27;first&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&#x27;second&#x27;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&#x27;third&#x27;</span>: <span class="number">3</span>,</span><br><span class="line">    <span class="string">&#x27;fourth&#x27;</span>: <span class="number">4</span>,</span><br><span class="line">    <span class="string">&#x27;fifth&#x27;</span>: <span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">test_args(**kwargs)</span><br><span class="line"><span class="comment"># results:</span></span><br><span class="line"><span class="comment"># First argument:  1</span></span><br><span class="line"><span class="comment"># Second argument:  2</span></span><br><span class="line"><span class="comment"># Third argument:  3</span></span><br><span class="line"><span class="comment"># Fourth argument:  4</span></span><br><span class="line"><span class="comment"># Fifth argument:  5</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker常用命令</title>
+      <link href="/2021/01/15/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2021/01/15/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h2><ul><li><p>显示所有镜像</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure></li><li><p>显示所有容器</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps</span><br><span class="line">Options:</span><br><span class="line">  -a, --all             Show all containers (default shows just running)</span><br><span class="line">  -q, --quiet           Only display container IDs</span><br></pre></td></tr></table></figure></li><li><p>启动容器</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -it  -d [imageid] /bin/bash</span><br></pre></td></tr></table></figure><table><thead><tr><th align="left">选项</th><th align="center">选项简写</th><th align="left">说明</th></tr></thead><tbody><tr><td align="left">–interactive</td><td align="center">-i</td><td align="left">即使没有连接，也要保持标准输入保持打开状态，一般与-t连用</td></tr><tr><td align="left">–tty</td><td align="center">-t</td><td align="left">分配一个伪tty，一般与-i连用</td></tr><tr><td align="left">–detach</td><td align="center">-d</td><td align="left">在后台运行容器，并且打印容器id</td></tr></tbody></table></li><li><p>启动已停止容器</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker start [containerid]</span><br></pre></td></tr></table></figure></li><li><p>关闭所有正在运行的容器</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">kill</span> $(docker ps -q)</span><br></pre></td></tr></table></figure></li><li><p>进入一个容器</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it [containerid] /bin/bash</span><br><span class="line">或者</span><br><span class="line">docker <span class="built_in">exec</span> -it [containerid] sh</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Develop Tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>shell常用命令</title>
+      <link href="/2018/11/21/shell%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2018/11/21/shell%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="输出日志"><a href="#输出日志" class="headerlink" title="输出日志"></a>输出日志</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">function log</span><br><span class="line">&#123;</span><br><span class="line">    echo -e &quot;[&quot;`date +&#x27;%Y-%m-%d %H:%M:%S&#x27;`&quot;]:&quot; &quot;&lt;span style=\&quot;color:green\&quot;&gt;$*&lt;/span&gt;&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> shell </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>linux标准输入&amp;输出</title>
+      <link href="/2018/11/07/linux%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/"/>
+      <url>/2018/11/07/linux%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Linux标准输入输出"><a href="#Linux标准输入输出" class="headerlink" title="Linux标准输入输出"></a>Linux标准输入输出</h2><ul><li>标准输入0    从键盘获得输入 &#x2F;proc&#x2F;self&#x2F;fd&#x2F;0</li><li>标准输出1    输出到屏幕（即控制台） &#x2F;proc&#x2F;self&#x2F;fd&#x2F;1</li><li>错误输出2    输出到屏幕（即控制台） &#x2F;proc&#x2F;self&#x2F;fd&#x2F;2</li></ul><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/dev/null代表linux的空设备文件，所有往这个文件里面写入的内容都会丢失，俗称“黑洞” </span><br><span class="line">- 2&gt;/dev/null意思就是把错误输出到“黑洞” </span><br><span class="line">- &gt;/dev/null 2&gt;&amp;1默认情况是1，也就是等同于1&gt;/dev/null 2&gt;&amp;1。意思就是把标准输出重定向到“黑洞”，还把错误输出2重定向到标准输出1，也就是标准输出和错误输出都进了“黑洞” </span><br><span class="line">- 2&gt;&amp;1 &gt;/dev/null意思就是把错误输出2重定向到标准出书1，也就是屏幕，标准输出进了“黑洞”，也就是标准输出进了黑洞，错误输出打印到屏幕 </span><br><span class="line">关于这里”&amp;”的作用，我们可以这么理解2&gt;/dev/null重定向到文件，那么2&gt;&amp;1，这里如果去掉了&amp;就是把错误输出给了文件1了，用了&amp;是表明1是标准输出。</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>xpath语法</title>
+      <link href="/2018/09/11/xpath%E8%AF%AD%E6%B3%95/"/>
+      <url>/2018/09/11/xpath%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h2 id="xpath语法"><a href="#xpath语法" class="headerlink" title="xpath语法"></a>xpath语法</h2><h3 id="选取节点"><a href="#选取节点" class="headerlink" title="选取节点"></a>选取节点</h3><table><thead><tr><th>表达式</th><th>描述</th></tr></thead><tbody><tr><td>nodename</td><td>选取此节点的所有子节点</td></tr><tr><td>&#x2F;</td><td>从根节点选取。</td></tr><tr><td>&#x2F;&#x2F;</td><td>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</td></tr><tr><td>.</td><td>选取当前节点。</td></tr><tr><td>..</td><td>选取当前节点的父节点。</td></tr><tr><td>@</td><td>选取属性。</td></tr></tbody></table>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> xpath </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>常用Linux命令</title>
+      <link href="/2018/09/10/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/"/>
+      <url>/2018/09/10/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Usage: grep [OPTION]... PATTERN [FILE]...</span><br><span class="line"></span><br><span class="line">    -R, -r, --recursive       递归 equivalent to --directories=recurse</span><br><span class="line">      --include=FILE_PATTERN  匹配文件名包含 search only files that match FILE_PATTERN</span><br><span class="line">      <span class="comment">#只在目录中所有的.php和.html文件中递归搜索字符 grep -r &quot;xxx&quot; ./ --include *.&#123;php,html&#125; </span></span><br><span class="line">      --exclude=FILE_PATTERN  跳过文件名包含 skip files and directories matching FILE_PATTERN</span><br><span class="line">      --exclude-from=FILE   跳过指定文件 skip files matching any file pattern from FILE</span><br><span class="line">      --exclude-dir=PATTERN  跳过文件夹名包含 directories that match PATTERN will be skipped.</span><br><span class="line">    -v, --invert-match        反匹配,列出未匹配的 select non-matching lines</span><br><span class="line">    -n, --line-number         列出匹配的的内容的行号 <span class="built_in">print</span> line number with output lines</span><br><span class="line">    -l, --files-with-matches  列出匹配到内容的文件名称 <span class="built_in">print</span> only names of FILEs containing matches</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">usage: netstat [-vWeenNcCF] [&lt;Af&gt;] -r         netstat &#123;-V|--version|-h|--<span class="built_in">help</span>&#125;</span><br><span class="line">       netstat [-vWnNcaeol] [&lt;Socket&gt; ...]</span><br><span class="line">       netstat &#123; [-vWeenNac] -I[&lt;Iface&gt;] | [-veenNac] -i | [-cnNe] -M | -s [-6tuw] &#125; [delay]</span><br><span class="line"></span><br><span class="line">netstat -anp</span><br><span class="line">    -n, --numeric            don<span class="string">&#x27;t resolve names</span></span><br><span class="line"><span class="string">    -p, --programs           display PID/Program name for sockets</span></span><br><span class="line"><span class="string">    -a, --all                display all sockets (default: connected)</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure><h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef </span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span>  access_log | grep <span class="string">&quot;14/Dec/2015:19:47&quot;</span> | awk -F <span class="string">&quot; &quot;</span> <span class="string">&#x27;&#123;if($15&gt;0.00001) print $15&#125;&#x27;</span>  | <span class="built_in">wc</span> -l</span><br><span class="line"><span class="built_in">cat</span> access.log | grep <span class="string">&quot;08/Nov/2018:16&quot;</span> | awk -F <span class="string">&quot; &quot;</span> <span class="string">&#x27;&#123;if ($25&gt;0.538) print $25&#125;&#x27;</span> | <span class="built_in">wc</span> -l</span><br><span class="line"></span><br><span class="line">ps -ef | grep zookeeper | grep -v grep | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs <span class="built_in">kill</span> -9</span><br><span class="line"></span><br><span class="line">test.txt</span><br><span class="line"></span><br><span class="line">Marry 2143 78 84 77</span><br><span class="line">Jack 2321 66 78 45</span><br><span class="line">Tom 2122 48 77 71</span><br><span class="line">Mike 2537 87 97 95</span><br><span class="line">Bob 2415 40 57 62</span><br><span class="line"></span><br><span class="line">awk <span class="string">&#x27;BEGIN&#123;math=0;eng=0;com=0;printf &quot;Lineno.   Name    No.    Math   English   Computer    Total\n&quot;;printf &quot;------------------------------------------------------------\n&quot;&#125;&#123;math+=$3; eng+=$4; com+=$5;printf &quot;%-8s %-7s %-7s %-7s %-9s %-10s %-7s \n&quot;,NR,$1,$2,$3,$4,$5,$3+$4+$5&#125; END&#123;printf &quot;------------------------------------------------------------\n&quot;;printf &quot;%-24s %-7s %-9s %-20s \n&quot;,&quot;Total:&quot;,math,eng,com;printf &quot;%-24s %-7s %-9s %-20s \n&quot;,&quot;Avg:&quot;,math/NR,eng/NR,com/NR&#125;&#x27;</span> test.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/01/17/8kS9IMEDQWlqLnH.jpg" alt="输出结果"></p><h2 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed [-nefr] [动作]</span><br><span class="line">选项与参数：</span><br><span class="line">-n ：使用安静(silent)模式。在一般 sed 的用法中，所有来自 STDIN 的数据一般都会被列出到终端上。但如果加上 -n 参数后，则只有经过sed 特殊处理的那一行(或者动作)才会被列出来。</span><br><span class="line">-e ：直接在命令列模式上进行 sed 的动作编辑；</span><br><span class="line">-f ：直接将 sed 的动作写在一个文件内， -f filename 则可以运行 filename 内的 sed 动作；</span><br><span class="line">-r ：sed 的动作支持的是延伸型正规表示法的语法。(默认是基础正规表示法语法)</span><br><span class="line">-i ：直接修改读取的文件内容，而不是输出到终端。</span><br><span class="line"></span><br><span class="line">动作说明： [n1[,n2]]<span class="keyword">function</span></span><br><span class="line">n1, n2 ：不见得会存在，一般代表『选择进行动作的行数』，举例来说，如果我的动作是需要在 10 到 20 行之间进行的，则『 10,20[动作行为] 』</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span>：</span><br><span class="line">a ：新增， a 的后面可以接字串，而这些字串会在新的一行出现(目前的下一行)～</span><br><span class="line">c ：取代， c 的后面可以接字串，这些字串可以取代 n1,n2 之间的行！</span><br><span class="line">d ：删除，因为是删除啊，所以 d 后面通常不接任何咚咚；</span><br><span class="line">i ：插入， i 的后面可以接字串，而这些字串会在新的一行出现(目前的上一行)；</span><br><span class="line">p ：列印，亦即将某个选择的数据印出。通常 p 会与参数 sed -n 一起运行～</span><br><span class="line">s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可以搭配正规表示法！例如 1,20s/old/new/g 就是啦！</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>常用npm包</title>
+      <link href="/2018/09/10/%E5%B8%B8%E7%94%A8npm%E5%8C%85/"/>
+      <url>/2018/09/10/%E5%B8%B8%E7%94%A8npm%E5%8C%85/</url>
+      
+        <content type="html"><![CDATA[<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Usage: hexo &lt;<span class="built_in">command</span>&gt;</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  clean     清除静态文件 Remove generated files and cache.</span><br><span class="line">  deploy    将pbulic下的今天资源推送到指定仓库上,需要先配置config里的deploy Deploy your website.</span><br><span class="line">  generate  生成静态文件 Generate static files.</span><br><span class="line">  init      项目初始化 Create a new Hexo folder. </span><br><span class="line">  new       新建一个文章 Create a new post.</span><br><span class="line">  server    开启本地服务 Start the server.</span><br><span class="line">  </span><br><span class="line">  常用的可以简写为:</span><br><span class="line">  hexo g</span><br><span class="line">  hexo s 等..</span><br><span class="line">  </span><br></pre></td></tr></table></figure><h2 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">browser-sync start --server --files <span class="string">&quot;xx&quot;</span></span><br><span class="line">多个文件用,分隔,例如<span class="string">&quot;index.html,css/*.css&quot;</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python读写Excel</title>
+      <link href="/2018/05/18/python%E8%AF%BB%E5%86%99Excel/"/>
+      <url>/2018/05/18/python%E8%AF%BB%E5%86%99Excel/</url>
+      
+        <content type="html"><![CDATA[<p>python3 使用xlrd和xlwt读取和写入Excel<br>更新某个excel表格，进行两项操作，且不覆盖原有的sheet：</p><ol><li>在原来的excel表中新增sheet</li><li>往原有的excel表中的某张sheet新增内容</li></ol><p>具体代码如下</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">from</span> xlutils.copy <span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">path = <span class="string">&#x27;demo.xls&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#打开需要操作的excel表</span></span><br><span class="line">wb=xlrd.open_workbook(path)</span><br><span class="line"></span><br><span class="line"><span class="comment">#复制原有表</span></span><br><span class="line">newb=copy(wb)</span><br><span class="line"></span><br><span class="line"><span class="comment">#新增sheet,参数是该sheet的名字，可自定义</span></span><br><span class="line">wbsheet=newb.add_sheet(<span class="string">&#x27;sheet_nameZzz&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#向新sheet中写入数据。本代码中的d是某个dataframe</span></span><br><span class="line">wbsheet.write(<span class="number">0</span>,<span class="number">0</span>,<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">wbsheet.write(<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;B&#x27;</span>)</span><br><span class="line">wbsheet.write(<span class="number">0</span>,<span class="number">2</span>,<span class="string">&#x27;C&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">        wbsheet.write(i+<span class="number">1</span>,j,<span class="string">&#x27;&#123;&#125;-&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(i+<span class="number">1</span>,j))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取原有excel表中sheet名为‘summary’的sheet</span></span><br><span class="line">sumsheet=newb.get_sheet(<span class="string">&#x27;Sheet1&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#k表示该sheet的最后一行</span></span><br><span class="line">rows=<span class="built_in">len</span>(sumsheet.rows)</span><br><span class="line"></span><br><span class="line"><span class="comment">#想原有sheet后面新增数据</span></span><br><span class="line">sumsheet.write(rows,<span class="number">0</span>,<span class="string">&#x27;&#123;&#125;-0&#x27;</span>.<span class="built_in">format</span>(rows))</span><br><span class="line">sumsheet.write(rows,<span class="number">1</span>,<span class="string">&#x27;&#123;&#125;-1&#x27;</span>.<span class="built_in">format</span>(rows))</span><br><span class="line">sumsheet.write(rows,<span class="number">2</span>,<span class="string">&#x27;&#123;&#125;-2&#x27;</span>.<span class="built_in">format</span>(rows))</span><br><span class="line"></span><br><span class="line"><span class="comment">#保存为原有的excel表路径</span></span><br><span class="line">newb.save(path)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> xlrd </tag>
+            
+            <tag> xlwt </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2017/10/24/hello-world/"/>
+      <url>/2017/10/24/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hello World </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
