@@ -1,15 +1,13 @@
 ---
 title: {{ title }}
 date: {{ date }}
+updated: {{ date }}
 author: green
-img: 
-top: 
-cover: 
-coverImg: 
-password: 
-toc: 
-mathjax: 
-summary: 
+type:
+description:
+keywords:
+cover:
+top_img:
 categories: 
 tags: 
 ---

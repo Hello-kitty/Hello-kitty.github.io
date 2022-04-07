@@ -1,15 +1,13 @@
 ---
 title: python参数
-author: green
 date: 2021-01-29 21:41:58
-img: https://i.loli.net/2021/01/29/eSwRCgsLmQfdznH.png
-top:
-cover:
-coverImg:
-password:
-toc:
-mathjax:
-summary:
+updated: 2021-01-29 21:41:58
+author: green
+type:
+description:
+keywords:
+cover: https://i.loli.net/2021/01/29/eSwRCgsLmQfdznH.png
+top_img:
 categories:
 tags: [python]
 ---

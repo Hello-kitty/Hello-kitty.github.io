@@ -1,15 +1,13 @@
 ---
 title: 常用Linux命令
 date: 2018-09-10 10:27:11
+updated: 2018-09-10 10:27:11
 author: green
-img: https://i.loli.net/2021/01/17/NPIjh7WQMn3Z6cY.png
-top: true
-cover: false
-coverImg: 
-password: 
-toc: false
-mathjax: false
-summary: 
+type:
+description:
+keywords:
+cover: https://i.loli.net/2021/01/17/NPIjh7WQMn3Z6cY.png
+top_img:
 categories: 
 tags: [linux]
 ---

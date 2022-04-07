@@ -1,15 +1,13 @@
 ---
 title: linux标准输入&输出
 date: 2018-11-07 15:23:53
+updated: 2018-11-07 15:23:53
 author: green
-img: https://i.loli.net/2021/01/18/sWBpIr5jSNMlk97.png
-top: false
-cover: false
-coverImg: 
-password: 
-toc: false
-mathjax: false
-summary: 
+type:
+description:
+keywords:
+cover: https://i.loli.net/2021/01/18/sWBpIr5jSNMlk97.png
+top_img:
 categories: 
 tags: [linux]
 ---

@@ -1,17 +1,16 @@
 ---
+
 title: docker常用命令
 date: 2021-01-15 19:35:31
+updated: 2022-01-15 19:35:31
 author: green
-img: https://i.loli.net/2021/01/17/LthCmfp5gdPTHWZ.png
-top: true
-cover: true
-coverImg: https://i.loli.net/2021/01/17/iwT6DGXvBIFuOaq.png
-password: 
-toc: false
-mathjax: false
-summary: 
+type:
+description:
+keywords:
+cover: https://i.loli.net/2021/01/17/LthCmfp5gdPTHWZ.png
+top_img:
 categories: Develop Tools
-tags: [docker]
+tags: [docker, linux]
 ---
 
 ## docker常用命令

@@ -1,15 +1,13 @@
 ---
 title: git常用命令-1
-author: green
 date: 2021-03-10 17:01:13
-img:
-top:
+updated: 2021-03-10 17:01:13
+author: green
+type:
+description:
+keywords:
 cover:
-coverImg:
-password:
-toc:
-mathjax:
-summary:
+top_img:
 categories:
 tags:
   - git

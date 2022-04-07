@@ -1,15 +1,13 @@
 ---
 title: 常用npm包
 date: 2018-09-10 09:32:32
+updated: 2018-09-10 09:32:32
 author: green
-img: https://i.loli.net/2021/01/18/WEknwdG1eRolrIj.png
-top: false
-cover: false
-coverImg: 
-password: 
-toc: false
-mathjax: false
-summary: 
+type:
+description:
+keywords:
+cover: https://i.loli.net/2021/01/18/WEknwdG1eRolrIj.png
+top_img:
 categories: 
 tags: [npm]
 ---

@@ -1,18 +1,17 @@
 ---
 title: python读写Excel
 date: 2018-05-18 15:59:22
+updated: 2018-05-18 15:59:22
 author: green
-img: https://i.loli.net/2021/01/18/aIEnH4jKmrDStoU.png
-top: false
-cover: false
-coverImg: 
-password: 
-toc: false
-mathjax: false
-summary: 
+type:
+description:
+keywords:
+cover: https://i.loli.net/2021/01/18/aIEnH4jKmrDStoU.png
+top_img:
 categories: 
 tags: [python,xlrd,xlwt]
 ---
+
 python3 使用xlrd和xlwt读取和写入Excel
 更新某个excel表格，进行两项操作，且不覆盖原有的sheet：
 
