@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>常用npm包</title>
+      <link href="/2022/05/16/%E5%B8%B8%E7%94%A8npm%E5%8C%85/"/>
+      <url>/2022/05/16/%E5%B8%B8%E7%94%A8npm%E5%8C%85/</url>
+      
+        <content type="html"><![CDATA[<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Usage: hexo &lt;<span class="built_in">command</span>&gt;</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  clean     清除静态文件 Remove generated files and cache.</span><br><span class="line">  deploy    将pbulic下的今天资源推送到指定仓库上,需要先配置config里的deploy Deploy your website.</span><br><span class="line">  generate  生成静态文件 Generate static files.</span><br><span class="line">  init      项目初始化 Create a new Hexo folder. </span><br><span class="line">  new       新建一个文章 Create a new post.</span><br><span class="line">  server    开启本地服务 Start the server.</span><br><span class="line">  </span><br><span class="line">  常用的可以简写为:</span><br><span class="line">  hexo g</span><br><span class="line">  hexo s 等..</span><br><span class="line">  </span><br></pre></td></tr></table></figure><h2 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">browser-sync start --server --files <span class="string">&quot;xx&quot;</span></span><br><span class="line">多个文件用,分隔,例如<span class="string">&quot;index.html,css/*.css&quot;</span></span><br></pre></td></tr></table></figure><h2 id="npm-check-updates"><a href="#npm-check-updates" class="headerlink" title="npm-check-updates"></a>npm-check-updates</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g npm-check-updates</span><br></pre></td></tr></table></figure><p>查看node和npm版本对应关系 <a href="https://nodejs.org/zh-cn/download/releases/">https://nodejs.org/zh-cn/download/releases/</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>macbook配置</title>
       <link href="/2021/10/09/macbook%E9%85%8D%E7%BD%AE/"/>
       <url>/2021/10/09/macbook%E9%85%8D%E7%BD%AE/</url>
@@ -38,40 +59,19 @@
     
     
     <entry>
-      <title>玩转npm</title>
-      <link href="/2021/10/09/%E7%8E%A9%E8%BD%ACnpm/"/>
-      <url>/2021/10/09/%E7%8E%A9%E8%BD%ACnpm/</url>
-      
-        <content type="html"><![CDATA[<p>npm install -g npm-check-updates</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> npm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>git常用命令-2</title>
       <link href="/2021/03/27/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-2/"/>
       <url>/2021/03/27/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-2/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看远程仓库信息</span></span><br><span class="line">$ git remote show [remotename]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清除在远程已经删除的本地分支</span></span><br><span class="line">$ git remote prune [remotename]</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       
       
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> linux </tag>
+            
+            <tag> git </tag>
             
         </tags>
       
@@ -90,9 +90,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> linux </tag>
+            
+            <tag> git </tag>
             
         </tags>
       
@@ -136,9 +136,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> docker </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -217,25 +217,6 @@
         <tags>
             
             <tag> linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>常用npm包</title>
-      <link href="/2018/09/10/%E5%B8%B8%E7%94%A8npm%E5%8C%85/"/>
-      <url>/2018/09/10/%E5%B8%B8%E7%94%A8npm%E5%8C%85/</url>
-      
-        <content type="html"><![CDATA[<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Usage: hexo &lt;<span class="built_in">command</span>&gt;</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  clean     清除静态文件 Remove generated files and cache.</span><br><span class="line">  deploy    将pbulic下的今天资源推送到指定仓库上,需要先配置config里的deploy Deploy your website.</span><br><span class="line">  generate  生成静态文件 Generate static files.</span><br><span class="line">  init      项目初始化 Create a new Hexo folder. </span><br><span class="line">  new       新建一个文章 Create a new post.</span><br><span class="line">  server    开启本地服务 Start the server.</span><br><span class="line">  </span><br><span class="line">  常用的可以简写为:</span><br><span class="line">  hexo g</span><br><span class="line">  hexo s 等..</span><br><span class="line">  </span><br></pre></td></tr></table></figure><h2 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">browser-sync start --server --files <span class="string">&quot;xx&quot;</span></span><br><span class="line">多个文件用,分隔,例如<span class="string">&quot;index.html,css/*.css&quot;</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> npm </tag>
             
         </tags>
       
