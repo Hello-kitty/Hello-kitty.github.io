@@ -17,6 +17,10 @@ tags:
 ## git常用命令
 
 ```bash
-# 初始化仓库
-$ git 
+# 查看远程仓库信息
+$ git remote show [remotename]
+
+# 清除在远程已经删除的本地分支
+$ git remote prune [remotename]
+
 ```

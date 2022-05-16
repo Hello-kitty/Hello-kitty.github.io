@@ -1,15 +1,15 @@
 ---
 title: 常用npm包
-date: 2018-09-10 09:32:32
-updated: 2018-09-10 09:32:32
 author: green
+date: 2022-05-16 17:34:22
+updated: 2022-05-16 17:34:22
 type:
 description:
 keywords:
 cover: https://i.loli.net/2021/01/18/WEknwdG1eRolrIj.png
 top_img:
-categories: 
-tags: [npm]
+categories:
+tags: [npm, linux]
 ---
 
 ## hexo
@@ -37,3 +37,14 @@ Commands:
 browser-sync start --server --files "xx"
 多个文件用,分隔,例如"index.html,css/*.css"
 ```
+
+## npm-check-updates
+
+```bash
+Usage: ncu -<command>
+
+Commands:
+  u [packagename]     升级包
+```
+
+>查看node和npm版本对应关系 <https://nodejs.org/zh-cn/download/releases/>
